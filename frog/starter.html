@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Crossy Frog</title>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.4.0/p5.min.js"></script>
+  <style>
+    body {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+      margin: 0;
+      background-color: darkgreen;
+      overflow: hidden;
+      
+    }
+    h1 {
+      font-size: 4em;
+      margin-bottom: 20px;
+      margin-left: 100px;
+    }
+    button {
+      padding: 15px 30px;
+      font-size: 18px;
+      background-color: #4CAF50;
+      color: white;
+      border: none;
+      cursor: pointer;
+      border-radius: 5px;
+    }
+
+    button2 {
+      padding: 30px 30px;
+      font-size: 18px;
+      background-color: #4CAF50;
+      color: white;
+      border: none;
+      cursor: pointer;
+      border-radius: 5px;
+    }
+
+    
+  </style>
+</head>
+<body>
+  <script>
+    function setup() {
+      createCanvas(windowWidth, windowHeight);
+    }
+    function draw() {
+      background('darkgreen');
+      textSize(50);
+      text('Crossy Frog', width/2, height/3);
+      button = createButton('Start Game');
+      button2 = createButton('Lore');
+      button.position(width/2 - button.width/2, height/2);
+      button2.position(width/2 - button.width/2, height/2);
+      button.mousePressed(goToStartingPage);
+      button2.mousePressed(gototlorepage);
+    }
+    function goToStartingPage() {
+      window.location.href = 'index.html';
+    }
+     function gototlorepage() {
+       window.location.href = 'lore.html';
+     }
+
+  </script>
+</body>
+</html>
